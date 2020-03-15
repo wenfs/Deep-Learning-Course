@@ -5,6 +5,8 @@ import tensorflow as tf
 # 加载数据集
 boston_housing = tf.keras.datasets.boston_housing
 (train_x,train_y),(_,_) = boston_housing.load_data(test_split=0)
+x=np.array(train_x) #转化为Numpy数组
+y=np.array(train_y)
 
 plt.rcParams['font.sans-serif']=['SimHei']
 plt.rcParams['axes.unicode_minus']=False
