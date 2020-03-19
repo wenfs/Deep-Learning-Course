@@ -12,16 +12,10 @@ f2 = tf.reduce_sum(a)*tf.reduce_sum(b)
 f3 = len(a)*tf.reduce_sum(tf.pow(a,2))
 f4 = tf.pow(tf.reduce_sum(a),2)
 w = (f1-f2)/(f3-f4)
-print(w)
+print("w = ",tf.cast(w,tf.float32).numpy())
 
 f11=tf.reduce_sum(b)-w*tf.reduce_sum(a)
 b = f11/len(a)
-print(b)
+print("b = ",tf.cast(b,tf.float32).numpy())
 
 
-#W = sum1/sum2
-#B = (tf.reduce_sum(b)-W*tf.reduce_sum(a))/tf.size(a)
-
-
-#print("w的结果为：%f"%W)
-#print("b的结果为：%f"%B)
